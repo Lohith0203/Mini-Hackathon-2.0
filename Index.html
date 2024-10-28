@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Player Trivia API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="title">
+        <h1> TWO PLAYER TRIVIA GAME</h1>
+    </section>
+
+    <form id="details">
+        <div>
+            <h3><label for="player-1-name"> PLAYER-1 NAME: </label>
+            <input id="player-1-name"></h3>
+
+            <h3><label for="player-2-name"> PLAYER-2 NAME: </label>
+            <input id="player-2-name"></h3>
+
+            <h3><label for="category">  CATEGORY: </label>
+            <select id="category">
+                <option value="" disabled selected> Select Category </option>
+                <option value="music"> Music </option>
+                <option value="sport_and_leisure"> Sport and Leisure </option> 
+                <option value="film_and_tv"> Film and TV </option>
+                <option value="arts_and_literature"> Arts and Literature </option>
+                <option value="history"> History </option>
+                <option value="society_and_culture"> Society and Culture </option>
+                <option value="science"> Science </option>
+                <option value="geography"> Geography </option>
+                <option value="food_and_drink"> Food and Drink </option>
+                <option value="general_knowledge"> General Knowledge </option>
+            </select></h3>
+
+        </div>
+
+        <div>
+            <button id="start-btn" > <a href="#status-bar"> START </a> </button>
+        </div>
+    </form>
+
+    <section id="status-bar">
+        <div id="player-info">
+            <h3> Current Player : </h3>
+            <h3 id="current-player"> </h3>
+        </div>
+
+        <div id="player-score">
+
+            <h3 id="player-1">  Player-1 </h3> <h3> 's Score : </h3> 
+            <h3 id="player-1-score">0 </h3>
+
+            <h3 id="player-2"> Player-2</h3>  <h3>'s Score : </h3>
+            <h3 id="player-2-score"> 0</h3>
+
+        </div>
+
+        <div id="difficulty-box">
+
+            <h3 > Difficulty Level :</h3>
+            <h3 id=difficulty>  </h3>
+
+        </div>
+
+        <div id="judgement">
+            
+        </div>
+    </section>
+
+    <section id="question-arena">
+
+        <div id="question">
+            Question Goes Here 
+        </div>
+
+        <div id="options">
+            <p id="option-1"> Option -1 </p>
+            <p id="option-2"> Option -2</p>
+            <p id="option-3"> Option -3 </p>
+            <p id="option-4"> Option -4</p>
+        </div>
+
+        
+        
+    </section>
+    <div id="roundEndButtons">
+        <button id="play-again"> PLAY AGAIN</button>
+        <button id="end-game"> END GAME</button>
+        <a href="index.html" id ="reset"> RESET </a>
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>
