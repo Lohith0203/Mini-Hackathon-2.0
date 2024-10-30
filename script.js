@@ -153,9 +153,19 @@ function playAgain() {
 }
 
 function endGame() {
-    const winner = playerScores[0] > playerScores[1] ? players[0] : players[1];
     const scoreMessage = `Final Scores - ${players[0]}: ${playerScores[0]}, ${players[1]}: ${playerScores[1]}`;
-    statusBar.innerText = `${scoreMessage} | Winner: ${winner}`;
+
+    if(playerScores[0]>playerScores[1]){
+        winner = players[0];
+        statusBar.innerText = `${scoreMessage} | Winner: ${winner}`;
+    }
+    if(playerScores[1]>playerScores[0]){
+        winner = players[1];
+        statusBar.innerText = `${scoreMessage} | Winner: ${winner}`;
+    }
+    if(playerScores[1]===playerScores[0]){
+        statusBar.innerText = `${scoreMessage} | Both are Winners`;
+    };
 
     questionArena.style.display = "none";
     playAgainBtn.style.display = "none";
